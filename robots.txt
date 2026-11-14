@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://n029k.github.io/sokuryoshi-yacho/sitemap.xml
