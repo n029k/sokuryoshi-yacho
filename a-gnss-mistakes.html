@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="only light"><title>GNSS測量でよくある間違い8選｜基線ベクトル・標高・誤差・補正｜測量士補 野帳</title><meta name="description" content="GNSS測量で間違えやすい点を、8つにまとめました。必要な衛星数、相対測位、基線ベクトルの距離、標高とジオイド高、環閉合差まで、例題つきで解説します。"><link rel="canonical" href="https://n029k.github.io/sokuryoshi-yacho/a-gnss-mistakes.html"><meta property="og:type" content="article"><meta property="og:title" content="GNSS測量でよくある間違い8選｜基線ベクトル・標高・誤差・補正"><meta property="og:description" content="GNSS測量で間違えやすい点を、8つにまとめました。必要な衛星数、相対測位、基線ベクトルの距離、標高とジオイド高、環閉合差まで、例題つきで解説します。"><meta property="og:url" content="https://n029k.github.io/sokuryoshi-yacho/a-gnss-mistakes.html"><link rel="icon" href="https://n029k.github.io/sokuryoshi-yacho/icon.svg" type="image/svg+xml"><style>html{color-scheme:only light}body{margin:0;background:#d9dccb;color:#1f2a1c;font:16px/1.9 'Zen Kaku Gothic New',system-ui,sans-serif}header{background:#3f5b2c;color:#fff;padding:12px 16px}header a{color:#fff;text-decoration:none;font-weight:900}main{max-width:720px;margin:24px auto;padding:20px 20px 50px;background:#fff;border:1px solid #b9bda5;border-radius:6px}h1{font-size:24px;line-height:1.5}h2{font-size:19px;border-left:5px solid #d8641a;padding-left:10px;margin-top:2em}.lead{font-size:17px}.note{color:#444c3f;font-size:14px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #c9ccb6;padding:6px 10px;text-align:left}th{background:#eef0e2}main a{color:#0b4fa8;text-decoration:underline;text-underline-offset:3px;font-weight:700}main a:visited{color:#5b2d8f}.cta a{display:block;background:#b8500f;color:#fff;text-decoration:none;padding:14px;border-radius:6px;text-align:center;font-weight:800}.cta a:visited{color:#fff}footer{text-align:center;color:#2f3a2a;font-size:13px;padding:10px 10px 30px}footer a{color:#0b4fa8;font-weight:700}@media(max-width:760px){main{margin:0;border:0;border-radius:0}}</style></head><body><header><a href="https://n029k.github.io/sokuryoshi-yacho/">測量士補 野帳</a></header><main><article><h1>GNSS測量でよくある間違い8選｜基線ベクトル・標高・誤差・補正</h1><p class="note"><time datetime="2026-11-14T13:40+09:00">2026年11月14日 13:40</time> 公開　測量を専攻する学生が作成した非公式の記事です。</p><p class="lead">GNSS測量は、毎年2問ほど出る分野です。文章の問題は<b>用語の取り違え</b>、計算の問題は<b>式の取り違え</b>で、点を落としやすいところです。</p>
+<p class="note">例の数字は、このサイトのオリジナルの問題です。</p>
+<h2>1. 単独測位に必要な衛星の数を、3個と思う</h2>
+<p>位置の3成分（X・Y・Z）に、受信機の時計の誤差を加えた<b>4つ</b>を求めます。そのため、<b>4個以上</b>の衛星が必要です。</p>
+<h2>2. 公共測量で使う方法を、単独測位だと思う</h2>
+<p>公共測量の基準点測量は、<b>2台以上で同時に観測する相対測位</b>です。2点間の基線ベクトルを求めます。</p>
+<h2>3. 相対測位で消える誤差を、取り違える</h2>
+<p>近い2点で同時に観測すると、大気による遅れ（<b>電離層・対流圏による遅延</b>）の影響がほぼ同じになるので、差を取ると小さくなります。<b>マルチパスや、電波の遮りは、観測点ごとに違う</b>ので、消えません。</p>
+<h2>4. 基線解析で、標高が直接出ると思う</h2>
+<p>基線解析で直接得られるのは、<b>2点間の基線ベクトル</b>（三次元直交座標の差）です。標高にするには、ジオイド高が必要です。</p>
+<h2>5. 標高の式で、ジオイド高を足してしまう</h2>
+<p><b>標高 ＝ 楕円体高 － ジオイド高</b>です。</p><p>例：楕円体高が 65.40 m、ジオイド高が 38.20 m のとき、標高は 65.40 － 38.20 ＝ 27.20 m です。足した 103.60 m は、間違いです。</p>
+<h2>6. 基線ベクトルの距離で、成分を足し算する</h2>
+<p>距離は、<b>√（ΔX² ＋ ΔY² ＋ ΔZ²）</b>です。</p><p>例：ΔX＝300 m、ΔY＝400 m、ΔZ＝1,200 m のとき、√1,690,000 ＝ 1,300 m です。足して 1,900 m にはなりません。</p>
+<h2>7. 環閉合差を、何のために求めるか忘れる</h2>
+<p>閉じた図形をつくる基線ベクトルの和は、本来0になります。そのずれが<b>環閉合差</b>です。<b>観測の良否（精度）を点検するため</b>に求めます。</p>
+<h2>8. セミ・ダイナミック補正が必要な場面を、取り違える</h2>
+<p>地殻変動の影響を補正する考え方で、<b>電子基準点のみを既知点とする測量</b>（1級基準点測量など）で使います。補正パラメータは、全国の陸域を<b>約5 kmのメッシュ</b>で分けて用意されています。</p>
+<h2>手を動かして、確かめる</h2>
+<p>式を読んだだけでは、本番で間違えます。数字を入れて、自分で解いてみましょう。</p>
+<p>→ <a href="https://n029k.github.io/sokuryoshi-yacho/gnss.html">GNSS測量の単元（練習問題つき）</a></p>
+<p>関連：<a href="https://n029k.github.io/sokuryoshi-yacho/a-passing-score.html">合格点と勉強の進め方</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/a-calc-patterns.html">計算問題の10の型</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/a-level-mistakes.html">水準測量の間違い8選</a></p>
+<p class="cta"><a href="https://n029k.github.io/sokuryoshi-yacho/">学習サイトで練習問題を解く</a></p></article></main><footer><a href="https://n029k.github.io/sokuryoshi-yacho/articles.html">記事一覧</a>　<a href="https://n029k.github.io/sokuryoshi-yacho/">学習サイトへ</a></footer></body></html>
