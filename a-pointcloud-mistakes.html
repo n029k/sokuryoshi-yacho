@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="only light"><title>三次元点群測量でよくある間違い7選｜フィルタリング・点密度・UAV・地上レーザ｜測量士補 野帳</title><meta name="description" content="三次元点群測量で間違えやすい点を7つにまとめました。点群データの用語、地図情報レベルと点密度、UAV写真測量の重複度と標定点、地上レーザの標定点まで例題つきで解説します。"><link rel="canonical" href="https://n029k.github.io/sokuryoshi-yacho/a-pointcloud-mistakes.html"><meta property="og:type" content="article"><meta property="og:title" content="三次元点群測量でよくある間違い7選｜フィルタリング・点密度・UAV・地上レーザ"><meta property="og:description" content="三次元点群測量で間違えやすい点を7つにまとめました。点群データの用語、地図情報レベルと点密度、UAV写真測量の重複度と標定点、地上レーザの標定点まで例題つきで解説します。"><meta property="og:url" content="https://n029k.github.io/sokuryoshi-yacho/a-pointcloud-mistakes.html"><link rel="icon" href="https://n029k.github.io/sokuryoshi-yacho/icon.svg" type="image/svg+xml"><style>html{color-scheme:only light}body{margin:0;background:#d9dccb;color:#1f2a1c;font:16px/1.9 'Zen Kaku Gothic New',system-ui,sans-serif}header{background:#3f5b2c;color:#fff;padding:12px 16px}header a{color:#fff;text-decoration:none;font-weight:900}main{max-width:720px;margin:24px auto;padding:20px 20px 50px;background:#fff;border:1px solid #b9bda5;border-radius:6px}h1{font-size:24px;line-height:1.5}h2{font-size:19px;border-left:5px solid #d8641a;padding-left:10px;margin-top:2em}.lead{font-size:17px}.note{color:#444c3f;font-size:14px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #c9ccb6;padding:6px 10px;text-align:left}th{background:#eef0e2}main a{color:#0b4fa8;text-decoration:underline;text-underline-offset:3px;font-weight:700}main a:visited{color:#5b2d8f}.cta a{display:block;background:#b8500f;color:#fff;text-decoration:none;padding:14px;border-radius:6px;text-align:center;font-weight:800}.cta a:visited{color:#fff}footer{text-align:center;color:#2f3a2a;font-size:13px;padding:10px 10px 30px}footer a{color:#0b4fa8;font-weight:700}@media(max-width:760px){main{margin:0;border:0;border-radius:0}}</style></head><body><header><a href="https://n029k.github.io/sokuryoshi-yacho/">測量士補 野帳</a></header><main><article><h1>三次元点群測量でよくある間違い7選｜フィルタリング・点密度・UAV・地上レーザ</h1><p class="note"><time datetime="2026-11-14T23:52+09:00">2026年11月14日 23:52</time> 公開　測量を専攻する学生が作成した非公式の記事です。</p><p class="lead">点群測量は第17〜20問を中心に毎年出ます。<b>用語と数字</b>を覚えるだけで点になる分野です。</p>
+<p class="note">例の数字はこのサイトのオリジナルの問題です。</p>
+<h2>1. 点群データの用語の順番を混ぜる</h2>
+<p>測っただけの点群が<b>オリジナルデータ</b>です。地表面以外を取り除く作業が<b>フィルタリング</b>で残った地表面のデータが<b>グラウンドデータ</b>です。それを格子状に並べたものが<b>グリッドデータ</b>です。</p>
+<h2>2. フィルタリングで何を残すか迷う</h2>
+<p>取り除くのは建物や樹木など<b>地表面以外</b>です。残るのが地表面です。</p>
+<h2>3. 地図情報レベルと点密度を逆に覚える</h2>
+<p>レベルの数字が<b>大きい</b>（粗い）ほど必要な点密度は<b>低く</b>てよいです。航空レーザではレベル 500 が 1点/0.25 m²、1000 が 1点/m²、2500 が 1点/4 m²、5000 が 1点/25 m² 以上です。</p>
+<h2>4. 必要な点の数を計算できない</h2>
+<p>面積 × 点密度で求めます。</p><p>例：レベル 2500 で 500 m × 500 m の範囲なら 250,000 ÷ 4 ＝ 62,500点以上です。</p>
+<h2>5. UAV写真測量の重複度を混ぜる</h2>
+<p>撮影後に確認できる場合は<b>同一コース内80%以上・隣接コース間60%以上</b>です。確認が困難な場合は同一コース内90%以上・隣接コース間60%以上です。</p>
+<h2>6. UAV写真測量の標定点の数を忘れる</h2>
+<p><b>外側標定点を3点以上、内側標定点を1点以上</b>配置します。</p>
+<h2>7. 地上レーザの標定点の数を混ぜる</h2>
+<p>標定点の数は<b>相似変換法で4点以上、後方交会法で3点以上</b>です。精度は水平・標高とも標準偏差で 0.1 m 以内です。</p>
+<h2>手を動かして確かめる</h2>
+<p>式を読んだだけでは本番で間違えます。数字を入れて自分で解いてみましょう。</p>
+<p>→ <a href="https://n029k.github.io/sokuryoshi-yacho/pointcloud.html">三次元点群測量の単元（練習問題つき）</a></p>
+<p>関連：<a href="https://n029k.github.io/sokuryoshi-yacho/a-passing-score.html">合格点と勉強の進め方</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/a-calc-patterns.html">計算問題の10の型</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/a-level-mistakes.html">水準測量の間違い8選</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/mock.html">模擬試験</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/plan.html">学習計画</a></p>
+<p class="cta"><a href="https://n029k.github.io/sokuryoshi-yacho/">学習サイトで練習問題を解く</a></p></article></main><footer><a href="https://n029k.github.io/sokuryoshi-yacho/articles.html">記事一覧</a>　<a href="https://n029k.github.io/sokuryoshi-yacho/">学習サイトへ</a></footer></body></html>

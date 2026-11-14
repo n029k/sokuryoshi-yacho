@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="only light"><title>測量の基準でよくある間違い7選｜標高と楕円体高・原点・平面直角座標系｜測量士補 野帳</title><meta name="description" content="測量の基準で間違えやすい点を7つにまとめました。標高と楕円体高、日本経緯度原点と水準原点、平面直角座標系の軸と縮尺係数、距離の補正まで例題つきで解説します。"><link rel="canonical" href="https://n029k.github.io/sokuryoshi-yacho/a-datum-mistakes.html"><meta property="og:type" content="article"><meta property="og:title" content="測量の基準でよくある間違い7選｜標高と楕円体高・原点・平面直角座標系"><meta property="og:description" content="測量の基準で間違えやすい点を7つにまとめました。標高と楕円体高、日本経緯度原点と水準原点、平面直角座標系の軸と縮尺係数、距離の補正まで例題つきで解説します。"><meta property="og:url" content="https://n029k.github.io/sokuryoshi-yacho/a-datum-mistakes.html"><link rel="icon" href="https://n029k.github.io/sokuryoshi-yacho/icon.svg" type="image/svg+xml"><style>html{color-scheme:only light}body{margin:0;background:#d9dccb;color:#1f2a1c;font:16px/1.9 'Zen Kaku Gothic New',system-ui,sans-serif}header{background:#3f5b2c;color:#fff;padding:12px 16px}header a{color:#fff;text-decoration:none;font-weight:900}main{max-width:720px;margin:24px auto;padding:20px 20px 50px;background:#fff;border:1px solid #b9bda5;border-radius:6px}h1{font-size:24px;line-height:1.5}h2{font-size:19px;border-left:5px solid #d8641a;padding-left:10px;margin-top:2em}.lead{font-size:17px}.note{color:#444c3f;font-size:14px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #c9ccb6;padding:6px 10px;text-align:left}th{background:#eef0e2}main a{color:#0b4fa8;text-decoration:underline;text-underline-offset:3px;font-weight:700}main a:visited{color:#5b2d8f}.cta a{display:block;background:#b8500f;color:#fff;text-decoration:none;padding:14px;border-radius:6px;text-align:center;font-weight:800}.cta a:visited{color:#fff}footer{text-align:center;color:#2f3a2a;font-size:13px;padding:10px 10px 30px}footer a{color:#0b4fa8;font-weight:700}@media(max-width:760px){main{margin:0;border:0;border-radius:0}}</style></head><body><header><a href="https://n029k.github.io/sokuryoshi-yacho/">測量士補 野帳</a></header><main><article><h1>測量の基準でよくある間違い7選｜標高と楕円体高・原点・平面直角座標系</h1><p class="note"><time datetime="2026-11-14T23:54+09:00">2026年11月14日 23:54</time> 公開　測量を専攻する学生が作成した非公式の記事です。</p><p class="lead">測量の基準は第4問と第22問で毎年出ます。<b>高さの基準</b>と<b>座標の向き</b>を取り違えないことが大切です。</p>
+<p class="note">例の数字はこのサイトのオリジナルの問題です。</p>
+<h2>1. 標高と楕円体高を混ぜる</h2>
+<p><b>標高</b>はジオイド面（東京湾平均海面）からの高さです。GNSSが直接求めるのは楕円体面からの<b>楕円体高</b>です。標高 ＝ 楕円体高 － ジオイド高 です。</p>
+<h2>2. 日本の測地系の楕円体を間違える</h2>
+<p>日本の測地系は世界測地系で準拠する楕円体は<b>GRS80楕円体</b>です。中心は地球の重心と一致します。</p>
+<h2>3. 経緯度原点と水準原点の場所を混ぜる</h2>
+<p><b>日本経緯度原点</b>は東京都港区麻布台、<b>日本水準原点</b>は東京都千代田区永田町にあります。水準原点の高さは東京湾平均海面上 24.3900 m です。</p>
+<h2>4. 平面直角座標系の軸を数学と同じに考える</h2>
+<p>X軸は<b>真北</b>が正、Y軸は<b>真東</b>が正です。全国を19の系に分けています。</p>
+<h2>5. 縮尺係数の大小を逆に考える</h2>
+<p>中央子午線上の縮尺係数は<b>0.9999</b>です。東西に離れるほど大きくなり、約90 km離れたところで1.0000になります。</p>
+<h2>6. 標高の高い場所の距離を楕円体面に直すと長くなると思う</h2>
+<p>楕円体面に直すと<b>短く</b>なります。補正量は S × H ÷ R です。</p><p>例：標高 637 m で 1,000.00 m を測り地球の半径を 6,370 km とすると 1,000 × 637 ÷ 6,370,000 ＝ 0.10 m なので 999.90 m です。</p>
+<h2>7. 縮尺係数を掛けるか割るか迷う</h2>
+<p>楕円体面上の距離を平面に直すときは<b>掛け</b>ます。逆向きなら割ります。</p><p>例：999.90 × 0.9999 ＝ 999.80 m です。</p>
+<h2>手を動かして確かめる</h2>
+<p>式を読んだだけでは本番で間違えます。数字を入れて自分で解いてみましょう。</p>
+<p>→ <a href="https://n029k.github.io/sokuryoshi-yacho/datum.html">測量の基準の単元（練習問題つき）</a></p>
+<p>関連：<a href="https://n029k.github.io/sokuryoshi-yacho/a-passing-score.html">合格点と勉強の進め方</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/a-calc-patterns.html">計算問題の10の型</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/a-level-mistakes.html">水準測量の間違い8選</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/mock.html">模擬試験</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/plan.html">学習計画</a></p>
+<p class="cta"><a href="https://n029k.github.io/sokuryoshi-yacho/">学習サイトで練習問題を解く</a></p></article></main><footer><a href="https://n029k.github.io/sokuryoshi-yacho/articles.html">記事一覧</a>　<a href="https://n029k.github.io/sokuryoshi-yacho/">学習サイトへ</a></footer></body></html>
