@@ -1,23 +1,23 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="only light"><title>誤差と最確値でよくある間違い8選｜標準偏差・重み・誤差の伝わり方｜測量士補 野帳</title><meta name="description" content="誤差と最確値で間違えやすい点を、8つにまとめました。重みつき平均、標準偏差の分母、平均値の精度、誤差の合成、相対精度まで、例題つきで解説します。"><link rel="canonical" href="https://n029k.github.io/sokuryoshi-yacho/a-error-mistakes.html"><meta property="og:type" content="article"><meta property="og:title" content="誤差と最確値でよくある間違い8選｜標準偏差・重み・誤差の伝わり方"><meta property="og:description" content="誤差と最確値で間違えやすい点を、8つにまとめました。重みつき平均、標準偏差の分母、平均値の精度、誤差の合成、相対精度まで、例題つきで解説します。"><meta property="og:url" content="https://n029k.github.io/sokuryoshi-yacho/a-error-mistakes.html"><link rel="icon" href="https://n029k.github.io/sokuryoshi-yacho/icon.svg" type="image/svg+xml"><style>html{color-scheme:only light}body{margin:0;background:#d9dccb;color:#1f2a1c;font:16px/1.9 'Zen Kaku Gothic New',system-ui,sans-serif}header{background:#3f5b2c;color:#fff;padding:12px 16px}header a{color:#fff;text-decoration:none;font-weight:900}main{max-width:720px;margin:24px auto;padding:20px 20px 50px;background:#fff;border:1px solid #b9bda5;border-radius:6px}h1{font-size:24px;line-height:1.5}h2{font-size:19px;border-left:5px solid #d8641a;padding-left:10px;margin-top:2em}.lead{font-size:17px}.note{color:#444c3f;font-size:14px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #c9ccb6;padding:6px 10px;text-align:left}th{background:#eef0e2}main a{color:#0b4fa8;text-decoration:underline;text-underline-offset:3px;font-weight:700}main a:visited{color:#5b2d8f}.cta a{display:block;background:#b8500f;color:#fff;text-decoration:none;padding:14px;border-radius:6px;text-align:center;font-weight:800}.cta a:visited{color:#fff}footer{text-align:center;color:#2f3a2a;font-size:13px;padding:10px 10px 30px}footer a{color:#0b4fa8;font-weight:700}@media(max-width:760px){main{margin:0;border:0;border-radius:0}}</style></head><body><header><a href="https://n029k.github.io/sokuryoshi-yacho/">測量士補 野帳</a></header><main><article><h1>誤差と最確値でよくある間違い8選｜標準偏差・重み・誤差の伝わり方</h1><p class="note"><time datetime="2026-11-14T13:43+09:00">2026年11月14日 13:43</time> 公開　測量を専攻する学生が作成した非公式の記事です。</p><p class="lead">誤差の問題は、第3問のほか、水準測量の最確値などでも使われる基礎の分野です。<b>式の形</b>を覚えれば、確実に点になります。</p>
-<p class="note">例の数字は、このサイトのオリジナルの問題です。</p>
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="only light"><title>誤差と最確値でよくある間違い8選｜標準偏差・重み・誤差の伝わり方｜測量士補 野帳</title><meta name="description" content="誤差と最確値で間違えやすい点を8つにまとめました。重みつき平均、標準偏差の分母、平均値の精度、誤差の合成、相対精度まで例題つきで解説します。"><link rel="canonical" href="https://n029k.github.io/sokuryoshi-yacho/a-error-mistakes.html"><meta property="og:type" content="article"><meta property="og:title" content="誤差と最確値でよくある間違い8選｜標準偏差・重み・誤差の伝わり方"><meta property="og:description" content="誤差と最確値で間違えやすい点を8つにまとめました。重みつき平均、標準偏差の分母、平均値の精度、誤差の合成、相対精度まで例題つきで解説します。"><meta property="og:url" content="https://n029k.github.io/sokuryoshi-yacho/a-error-mistakes.html"><link rel="icon" href="https://n029k.github.io/sokuryoshi-yacho/icon.svg" type="image/svg+xml"><style>html{color-scheme:only light}body{margin:0;background:#d9dccb;color:#1f2a1c;font:16px/1.9 'Zen Kaku Gothic New',system-ui,sans-serif}header{background:#3f5b2c;color:#fff;padding:12px 16px}header a{color:#fff;text-decoration:none;font-weight:900}main{max-width:720px;margin:24px auto;padding:20px 20px 50px;background:#fff;border:1px solid #b9bda5;border-radius:6px}h1{font-size:24px;line-height:1.5}h2{font-size:19px;border-left:5px solid #d8641a;padding-left:10px;margin-top:2em}.lead{font-size:17px}.note{color:#444c3f;font-size:14px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #c9ccb6;padding:6px 10px;text-align:left}th{background:#eef0e2}main a{color:#0b4fa8;text-decoration:underline;text-underline-offset:3px;font-weight:700}main a:visited{color:#5b2d8f}.cta a{display:block;background:#b8500f;color:#fff;text-decoration:none;padding:14px;border-radius:6px;text-align:center;font-weight:800}.cta a:visited{color:#fff}footer{text-align:center;color:#2f3a2a;font-size:13px;padding:10px 10px 30px}footer a{color:#0b4fa8;font-weight:700}@media(max-width:760px){main{margin:0;border:0;border-radius:0}}</style></head><body><header><a href="https://n029k.github.io/sokuryoshi-yacho/">測量士補 野帳</a></header><main><article><h1>誤差と最確値でよくある間違い8選｜標準偏差・重み・誤差の伝わり方</h1><p class="note"><time datetime="2026-11-14T13:43+09:00">2026年11月14日 13:43</time> 公開　測量を専攻する学生が作成した非公式の記事です。</p><p class="lead">誤差の問題は第3問のほか、水準測量の最確値などでも使われる基礎の分野です。<b>式の形</b>を覚えれば確実に点になります。</p>
+<p class="note">例の数字はこのサイトのオリジナルの問題です。</p>
 <h2>1. 標準偏差の分母を n にする</h2>
-<p><b>σ ＝ √（Σv² ÷ （n － 1））</b>です。n ではなく、n － 1 で割ります。</p><p>例：測定値が 10、12、14 mm のとき、平均は 12、残差は －2、0、＋2 です。Σv²＝8、σ＝√（8 ÷ 2）＝ 2 mm です。</p>
-<h2>2. 平均値の標準偏差を、σ のままにする</h2>
-<p><b>平均値の標準偏差 ＝ σ ÷ √n</b>です。</p><p>例：1回の標準偏差が 6 mm で、9回測ったとき、6 ÷ 3 ＝ 2 mm です。</p>
-<h2>3. 精度を2倍にする回数を、2倍だと思う</h2>
-<p>σ ÷ √n を半分にするには、√n を2倍にします。つまり、測定回数は<b>4倍</b>です。</p>
-<h2>4. 誤差を、足し算してしまう</h2>
-<p>独立な誤差は、<b>2乗して足してから、平方根</b>をとります。</p><p>例：±3 mm と ±4 mm を足した量は、√（3² ＋ 4²）＝ 5 mm です。7 mm にはなりません。</p>
-<h2>5. 同じ精度をつないだときの式を、間違える</h2>
-<p>同じ精度 m の区間を n 回つなぐと、全体の標準偏差は <b>m × √n</b>です。</p><p>例：±5 mm の区間を4回つなぐと、5 × 2 ＝ ±10 mm です。</p>
-<h2>6. 重みつき平均で、重みを掛け忘れる</h2>
-<p>重みつき平均は、（重み × 値）の合計を、重みの合計で割ります。</p><p>例：平均が 10.00 m（重み2）と 10.50 m（重み3）のとき、（2 × 10.00 ＋ 3 × 10.50）÷ 5 ＝ 10.30 m です。</p>
+<p><b>σ ＝ √（Σv² ÷ （n － 1））</b>です。n ではなくn － 1 で割ります。</p><p>例：測定値が 10、12、14 mm のとき、平均は 12、残差は －2、0、＋2 です。Σv²＝8、σ＝√（8 ÷ 2）＝ 2 mm です。</p>
+<h2>2. 平均値の標準偏差をσ のままにする</h2>
+<p><b>平均値の標準偏差 ＝ σ ÷ √n</b>です。</p><p>例：1回の標準偏差が 6 mm で9回測ったとき、6 ÷ 3 ＝ 2 mm です。</p>
+<h2>3. 精度を2倍にする回数を2倍だと思う</h2>
+<p>σ ÷ √n を半分にするには√n を2倍にします。つまり、測定回数は<b>4倍</b>です。</p>
+<h2>4. 誤差を足し算してしまう</h2>
+<p>独立な誤差は<b>2乗して足してから平方根</b>をとります。</p><p>例：±3 mm と ±4 mm を足した量は√（3² ＋ 4²）＝ 5 mm です。7 mm にはなりません。</p>
+<h2>5. 同じ精度をつないだときの式を間違える</h2>
+<p>同じ精度 m の区間を n 回つなぐと全体の標準偏差は <b>m × √n</b>です。</p><p>例：±5 mm の区間を4回つなぐと5 × 2 ＝ ±10 mm です。</p>
+<h2>6. 重みつき平均で重みを掛け忘れる</h2>
+<p>重みつき平均は（重み × 値）の合計を重みの合計で割ります。</p><p>例：平均が 10.00 m（重み2）と 10.50 m（重み3）のとき、（2 × 10.00 ＋ 3 × 10.50）÷ 5 ＝ 10.30 m です。</p>
 <h2>7. 相対精度の単位をそろえない</h2>
-<p><b>相対精度 ＝ 誤差 ÷ 距離</b>です。単位をそろえます。</p><p>例：50 m の距離で 5 mm の誤差は、5 mm ÷ 50,000 mm ＝ 1/10,000 です。</p>
-<h2>8. 閉合比の大小を、逆に考える</h2>
-<p>閉合比は、<b>分母が大きいほど、精度がよい</b>です。1/20,000 は、1/10,000 より精度がよいです。</p>
-<h2>手を動かして、確かめる</h2>
-<p>式を読んだだけでは、本番で間違えます。数字を入れて、自分で解いてみましょう。</p>
+<p><b>相対精度 ＝ 誤差 ÷ 距離</b>です。単位をそろえます。</p><p>例：50 m の距離で 5 mm の誤差は5 mm ÷ 50,000 mm ＝ 1/10,000 です。</p>
+<h2>8. 閉合比の大小を逆に考える</h2>
+<p>閉合比は<b>分母が大きいほど精度がよい</b>です。1/20,000 は1/10,000 より精度がよいです。</p>
+<h2>手を動かして確かめる</h2>
+<p>式を読んだだけでは本番で間違えます。数字を入れて自分で解いてみましょう。</p>
 <p>→ <a href="https://n029k.github.io/sokuryoshi-yacho/error.html">誤差の単元（練習問題つき）</a></p>
 <p>関連：<a href="https://n029k.github.io/sokuryoshi-yacho/a-passing-score.html">合格点と勉強の進め方</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/a-calc-patterns.html">計算問題の10の型</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/a-level-mistakes.html">水準測量の間違い8選</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/mock.html">模擬試験</a>、<a href="https://n029k.github.io/sokuryoshi-yacho/plan.html">学習計画</a></p>
 <p class="cta"><a href="https://n029k.github.io/sokuryoshi-yacho/">学習サイトで練習問題を解く</a></p></article></main><footer><a href="https://n029k.github.io/sokuryoshi-yacho/articles.html">記事一覧</a>　<a href="https://n029k.github.io/sokuryoshi-yacho/">学習サイトへ</a></footer></body></html>
