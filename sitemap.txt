@@ -56,4 +56,7 @@ https://n029k.github.io/sokuryoshi-yacho/a-registration.html
 https://n029k.github.io/sokuryoshi-yacho/a-chousashi-exempt.html
 https://n029k.github.io/sokuryoshi-yacho/a-self-study-vs-course.html
 https://n029k.github.io/sokuryoshi-yacho/a-course-comparison.html
+https://n029k.github.io/sokuryoshi-yacho/a-sokuryoshi-guide.html
+https://n029k.github.io/sokuryoshi-yacho/a-sokuryoshi-afternoon.html
+https://n029k.github.io/sokuryoshi-yacho/a-sokuryoshi-past-exams.html
 https://n029k.github.io/sokuryoshi-yacho/articles.html
